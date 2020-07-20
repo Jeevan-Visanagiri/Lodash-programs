@@ -1,10 +1,7 @@
-//rest and spread
-var say = _.rest(function(what, names) {
-    var last = _.last(names);
-    var initial = _.initial(names);
-    var finalSeparator = (_.size(names) > 1 ? ', & ' : '');
-    return what + ' ' + initial.join(', ') +
-      finalSeparator + _.last(names);
-  });
-  
+const say = (what, ...names) => {
+  const [last, ...initial] = names.reverse();
+  const finalSeparator = (names.length > 1 ? ', &' : '');
+  return `${what} ${initial.join(', ')} ${finalSeparator} ${last}`;
+};
+
   console.log(say('hello', 'fred', 'barney', 'pebbles'));

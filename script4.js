@@ -1,8 +1,13 @@
 //slice
-let slicefunction=(arr)=>
+let slicefunction=(arr,start,end)=>
 {
-    return _.slice(arr,2,arr.length)
+    var result=[];
+    for (let i = start; i < end; i++) {
+        result.push(arr[i]);
+        
+    }
+    return result;
 }
 
 let arr=["first place ","second place","third place","fourth place"];
-console.log(slicefunction(arr));
+console.log(slicefunction(arr,2,arr.length));

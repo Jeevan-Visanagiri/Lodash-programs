@@ -1,5 +1,7 @@
 
-let chunkfunction=(arr)=>{return  _.chunk(arr,2)}
-let arr=["Peater","Spiderman series","Tony stark","Iron Man series"];
-console.log(chunkfunction(arr));
+let mfunction=(arr,multp)=>{
+  return  arr.map(n => n * multp);    
+}
+var arr=[1,2,3];
+console.log(mfunction(arr,2));
 

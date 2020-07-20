@@ -1,4 +1,3 @@
-var greet = (greeting, name) => greeting + ' ' + name;//arrow function
-  
-  var sayHelloTo = _.partial(greet, 'Hello');//LOdas partial 
+const sayHelloTo = name => { return 'hello'+ name};
+
   console.log( sayHelloTo('Jeevan'));
